@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css'; // Importar el archivo CSS para darle estilo
+import './App.css';
 
 const letras = 'qwertyuiopasdfghjklñzxcvbnm';
 const numeros = '0123456789';
@@ -17,12 +17,12 @@ function App() {
       unir[Math.floor(Math.random() * unir.length)]
     ).join('');
     setPassword(contraseña);
-    setCopied(false); // Reseteamos el estado de copiado al generar una nueva contraseña
+    setCopied(false); 
   };
 
   const copiarContraseña = () => {
     navigator.clipboard.writeText(password)
-      .then(() => setCopied(true)) // Cambiamos el estado cuando la copia es exitosa
+      .then(() => setCopied(true))
       .catch(err => console.error('Error al copiar:', err));
   };
 
